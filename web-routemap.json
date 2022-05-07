@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://growing-web/route-map.json",
+  "title": "Web Route Map Manifest",
+  "description": "web-route map manifest field in growing-web.",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string" },
+          "element": { "type": "string" },
+          "properties": {
+            "type": "object",
+            "properties": {
+              "import": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "$schema": {
+      "description": "schema remote path.",
+      "type": "string"
+    },
+    "routes": {
+      "$ref": "#/definitions/routes",
+      "description": "web-router routing configuration."
+    }
+  },
+  "required": ["schemaVersion", "entries"]
+}

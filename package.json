@@ -1,0 +1,23 @@
+{
+  "name": "@growing-web/web-schemas",
+  "version": "0.0.1",
+  "description": "JSON Schema Collection.",
+  "main": "index.js",
+  "files": [
+    "web-builder.json",
+    "web-routemap.json",
+    "web-module.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/growing-web/schemas.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/growing-web/schemas/issues"
+  },
+  "homepage": "https://github.com/growing-web/schemas#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}

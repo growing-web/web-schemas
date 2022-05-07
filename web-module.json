@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://growing-web/web-module.json",
+  "title": "Web Module Manifest",
+  "description": "web-module manifest field in growing-web.",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "defaultProvider": {
+      "type": "string",
+      "enum": [
+        "nodemodules",
+        "dancf",
+        "jspm",
+        "jspm.system",
+        "skypack",
+        "jsdelivr",
+        "unpkg"
+      ]
+    },
+    "recordable": {
+      "type": "object",
+      "additionalProperties": true,
+      "patternProperties": {
+        "[a-zA-Z]+": {
+          "type": "string"
+        }
+      }
+    },
+    "env": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "properties": {
+    "$schema": {
+      "description": "schema remote path.",
+      "type": "string"
+    },
+    "defaultProvider": {
+      "$ref": "#/definitions/defaultProvider",
+      "description": "The default provider to use for a new install."
+    },
+    "providers": {
+      "$ref": "#/definitions/recordable",
+      "description": "Alternatively a custom provider can be referenced this way for eg private CDN / registry support."
+    },
+    "dependencies": {
+      "$ref": "#/definitions/recordable",
+      "description": "Install a package target into the import map."
+    },
+    "resolutions": {
+      "$ref": "#/definitions/recordable",
+      "description": "Custom dependency resolution overrides for all installs."
+    },
+    "env": {
+      "$ref": "#/definitions/env",
+      "description": "The conditional environment resolutions to apply."
+    }
+  },
+  "required": ["schemaVersion", "entries"]
+}
