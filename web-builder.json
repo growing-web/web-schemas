@@ -141,5 +141,5 @@
       "description": "local server configuration"
     }
   },
-  "required": ["schemaVersion", "entries"]
+  "required": ["entries"]
 }
