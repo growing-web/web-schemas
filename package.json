@@ -9,6 +9,7 @@
     ".": "./dist/index.mjs"
   },
   "files": [
+    "dist",
     "web-builder.json",
     "web-routemap.json",
     "web-module.json"
