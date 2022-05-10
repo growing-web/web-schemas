@@ -15,7 +15,8 @@
     "web-module.json"
   ],
   "scripts": {
-    "build": "unbuild"
+    "build": "unbuild",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
