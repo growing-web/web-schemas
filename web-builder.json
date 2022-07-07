@@ -90,6 +90,13 @@
         "proxy": { "$ref": "#/definitions/proxy" }
       }
     },
+    "experiment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cssInJs": { "type": "boolean" }
+      }
+    },
     "proxy": {
       "type": "array",
       "items": {
@@ -138,7 +145,11 @@
     },
     "server": {
       "$ref": "#/definitions/server",
-      "description": "local server configuration"
+      "description": "local server configuration."
+    },
+    "experiment": {
+      "$ref": "#/definitions/experiment",
+      "description": "Configuration with experimental features."
     }
   },
   "required": ["entries"]
