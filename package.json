@@ -1,6 +1,6 @@
 {
   "name": "@growing-web/web-schemas",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "JSON Schema Collection.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
